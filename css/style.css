@@ -410,3 +410,85 @@ section.design .text ul li::before {
   position: relative;
   top: 1px;
 }
+/* ################# */
+/* portfolio section */
+/* ################# */
+section.portfolio {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+section.portfolio .filters {
+  margin-bottom: 40px;
+}
+section.portfolio .filters ul {
+  display: flex;
+  justify-content: center;
+}
+section.portfolio .filters li {
+  padding: 10px;
+  cursor: pointer;
+}
+section.portfolio .filters .active {
+  background-color: var(--main-color);
+  color: #fff;
+}
+section.portfolio .image-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+@media (max-width: 767px) {
+  section.portfolio .image-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+section.portfolio .image-container .box {
+  position: relative;
+  overflow: hidden;
+}
+section.portfolio .image-container .box img {
+  width: 100%;
+  transition: transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -ms-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
+}
+section.portfolio .image-container .box img:hover {
+  transform: scale(1.1) rotate(3deg);
+  -webkit-transform: scale(1.1) rotate(3deg);
+  -moz-transform: scale(1.1) rotate(3deg);
+  -ms-transform: scale(1.1) rotate(3deg);
+  -o-transform: scale(1.1) rotate(3deg);
+}
+section.portfolio .image-container .box .caption {
+  background-color: #fff;
+  padding: 20px;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+section.portfolio .image-container .box:hover .caption {
+  bottom: 0;
+}
+section.portfolio .image-container .box .caption h4 {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+section.portfolio .image-container .box .caption p {
+  color: var(--main-color);
+}
+section.portfolio > a:last-child {
+  display: block;
+  background-color: var(--main-color);
+  padding: 15px 20px;
+  margin: 30px auto 0;
+  width: fit-content;
+  color: #fff;
+  text-transform: uppercase;
+}
